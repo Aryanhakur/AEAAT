@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AEAAT - Home-to-Home Beauty Service</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li>
+                    <a href="#" id="order-dropdown">Orders</a>
+                    <ul id="order-list" class="dropdown-content"></ul>
+                </li>
+                <li id="nav-login"><a href="login.html">Login/Sign Up</a>
+                    <button id="logout-button" style="display:none;">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Header Section -->
+        <header class="header">
+            <div id="threejs-background"></div>
+            <div class="header-content">
+                <h1>Welcome to AEAAT - Your Home-to-Home Beauty Service</h1>
+                <p>Experience luxury beauty treatments in the comfort of your home.</p>
+            </div>
+        </header>
+    
+        <!-- Body Section -->
+        <main>
+            <section class="services">
+                <h2>Our Services</h2>
+                <div class="service-list">
+                    <!-- Example Product -->
+                    <div class="service" data-id="1" data-category="Hair Treatments">
+                        <h3>Threading</h3>
+                        <p>Starts at ₹99</p>
+                        <p>Finest thread for high-precision threading & desired eyebrow shape</p>
+                        <button onclick="addToCart(1)">Add to Cart</button>
+                    </div>
+                    <!-- More services added here dynamically using JavaScript -->
+                </div>
+            </section>
+    
+            <!-- Mix Package Section -->
+            <section class="mix-package">
+                <h2>Create Your Own Package</h2>
+                <div id="package-builder"></div>
+                <button id="finalize-package">Finalize Package</button>
+            </section>
+        </main>
+    
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <ul class="social-media">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+                <form class="newsletter">
+                    <input type="email" placeholder="Subscribe to our newsletter">
+                    <button>Subscribe</button>
+                </form>
+                <p>&copy; 2024 AEAAT. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="js/api.js"></script>
+        <script src="js/three.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
